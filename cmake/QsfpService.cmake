@@ -253,6 +253,15 @@ target_link_libraries(m4062nhp_bsp
   FBThrift::thriftcpp2
 )
 
+add_library(m6060actl_bsp
+	fboss/lib/bsp/m6060actl/M6060ACTLBspPlatformMapping.cpp
+)
+
+target_link_libraries(m6060actl_bsp
+  bsp_platform_mapping
+  FBThrift::thriftcpp2
+)
+
 add_library(qsfp_bsp_core
   fboss/lib/bsp/BspGenericSystemContainer.cpp
   fboss/lib/bsp/BspIOBus.cpp
@@ -296,6 +305,7 @@ target_link_libraries(qsfp_bsp_core
   leh800bcls_bsp
   saintpaul_bsp
   m4062nhp_bsp
+  m6060actl_bsp
   device_mdio
   fpga_device
   phy_management_base

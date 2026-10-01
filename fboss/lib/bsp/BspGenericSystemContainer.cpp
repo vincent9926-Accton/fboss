@@ -9,6 +9,7 @@
 #include "fboss/lib/bsp/ladakh800bcls/Ladakh800bclsBspPlatformMapping.h"
 #include "fboss/lib/bsp/leh800bcls/Leh800bclsBspPlatformMapping.h"
 #include "fboss/lib/bsp/m4062nhp/M4062nhpBspPlatformMapping.h"
+#include "fboss/lib/bsp/m6060actl/M6060ACTLBspPlatformMapping.h"
 #include "fboss/lib/bsp/meru800bfa/Meru800bfaBspPlatformMapping.h"
 #include "fboss/lib/bsp/meru800bia/Meru800biaBspPlatformMapping.h"
 #include "fboss/lib/bsp/minipack3bta/Minipack3BTABspPlatformMapping.h"
@@ -202,6 +203,15 @@ template <>
 std::shared_ptr<M4062nhpSystemContainer>
 M4062nhpSystemContainer::getInstance() {
   return _m4062nhpSystemContainer.try_get();
+}
+
+using M6060ACTLSystemContainer =
+    BspGenericSystemContainer<M6060ACTLBspPlatformMapping>;
+folly::Singleton<M6060ACTLSystemContainer> _m6060actlSystemContainer;
+template <>
+std::shared_ptr<M6060ACTLSystemContainer>
+M6060ACTLSystemContainer::getInstance() {
+  return _m6060actlSystemContainer.try_get();
 }
 
 } // namespace fboss
