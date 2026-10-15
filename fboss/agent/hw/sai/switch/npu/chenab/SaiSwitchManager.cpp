@@ -110,4 +110,13 @@ void logDropReasons(
   CHECK_EQ(egressDropReasons.size(), 0);
 }
 
+void logDropBitmapReasons(const HwSwitchDropBitmapStats& /*stats*/) {}
+
+void publishSwitchWatermarks(HwSwitchWatermarkStats& /*watermarkStats*/) {}
+
+void publishSwitchPipelineStats(HwSwitchPipelineStats& /*pipelineStats*/) {}
+
+void publishSwitchTemperatureStats(
+    HwSwitchTemperatureStats& /*temperatureStats*/) {}
+
 } // namespace facebook::fboss
