@@ -1,0 +1,11 @@
+{
+  "platformType": 59,
+  "productNamePrefixes": [
+    "M6060ACTL"
+  ],
+  "modeNames": [
+    "m6060actl"
+  ],
+  "asicType": 25,
+  "numSwitchAsics": 1
+}
