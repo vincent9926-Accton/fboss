@@ -14,6 +14,8 @@
 #include "fboss/led_service/M4061clscLedManager.h"
 #include "fboss/led_service/M4061nhpLedManager.h"
 #include "fboss/led_service/M4062nhpLedManager.h"
+#include "fboss/led_service/M6060ACTLLedManager.h"
+#include "fboss/led_service/M6060ACTLLedManager.h"
 #include "fboss/led_service/Meru800bfaLedManager.h"
 #include "fboss/led_service/Meru800biaLedManager.h"
 #include "fboss/led_service/Minipack3BTALedManager.h"
@@ -87,6 +89,10 @@ std::unique_ptr<LedManager> createLedManager() {
     return std::make_unique<M4061nhpLedManager>();
   } else if (mode == PlatformType::PLATFORM_M4062NHP) {
     return std::make_unique<M4062nhpLedManager>();
+  } else if (mode == PlatformType::PLATFORM_M6060ACTL) {
+    return std::make_unique<M6060ACTLLedManager>()
+  } else if (mode == PlatformType::PLATFORM_M6060ACTL) {
+    return std::make_unique<M6060ACTLLedManager>();
   } else if (mode == PlatformType::PLATFORM_M4061CLSC) {
     return std::make_unique<M4061clscLedManager>();
   } else if (mode == PlatformType::PLATFORM_ICETEA800BC) {

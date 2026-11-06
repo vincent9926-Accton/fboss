@@ -68,6 +68,7 @@ add_library(led_manager_lib
   fboss/led_service/M4052ACTMLedManager.cpp
   fboss/led_service/M4061nhpLedManager.cpp
   fboss/led_service/M4062nhpLedManager.cpp
+  fboss/led_service/M6060ACTLLedManager.cpp
   fboss/led_service/Icetea800bcLedManager.cpp
   fboss/led_service/Meru800biaLedManager.cpp
   fboss/led_service/Meru800bfaLedManager.cpp
