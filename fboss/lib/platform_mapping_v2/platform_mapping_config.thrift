@@ -40,6 +40,7 @@ enum CoreType {
   J4_NIF = 12, // J4 NIF
   J4_FE = 13, // J4 Fabric
   P200 = 14, // m5120
+  CHENAB2_NIF = 15,
 
   // Transceivers
   OSFP = 100,
