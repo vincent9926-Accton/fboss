@@ -13,7 +13,7 @@
 #include "fboss/lib/bsp/m4061nhp/M4061nhpBspPlatformMapping.h"
 #include "fboss/lib/bsp/m4062nhp/M4062nhpBspPlatformMapping.h"
 #include "fboss/lib/bsp/m5120csc/M5120cscBspPlatformMapping.h"
-#include "fboss/lib/bsp/m6060actl/M6060ACTLBspPlatformMapping.h
+#include "fboss/lib/bsp/m6060actl/M6060ACTLBspPlatformMapping.h"
 #include "fboss/lib/bsp/meru800bfa/Meru800bfaBspPlatformMapping.h"
 #include "fboss/lib/bsp/meru800bia/Meru800biaBspPlatformMapping.h"
 #include "fboss/lib/bsp/minipack3bta/Minipack3BTABspPlatformMapping.h"
