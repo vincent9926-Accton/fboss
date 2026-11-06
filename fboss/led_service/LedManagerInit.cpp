@@ -90,7 +90,7 @@ std::unique_ptr<LedManager> createLedManager() {
   } else if (mode == PlatformType::PLATFORM_M4062NHP) {
     return std::make_unique<M4062nhpLedManager>();
   } else if (mode == PlatformType::PLATFORM_M6060ACTL) {
-    return std::make_unique<M6060ACTLLedManager>()
+    return std::make_unique<M6060ACTLLedManager>();
   } else if (mode == PlatformType::PLATFORM_M6060ACTL) {
     return std::make_unique<M6060ACTLLedManager>();
   } else if (mode == PlatformType::PLATFORM_M4061CLSC) {
