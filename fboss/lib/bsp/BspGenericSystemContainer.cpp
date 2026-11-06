@@ -13,6 +13,7 @@
 #include "fboss/lib/bsp/m4061nhp/M4061nhpBspPlatformMapping.h"
 #include "fboss/lib/bsp/m4062nhp/M4062nhpBspPlatformMapping.h"
 #include "fboss/lib/bsp/m5120csc/M5120cscBspPlatformMapping.h"
+#include "fboss/lib/bsp/m6060actl/M6060ACTLBspPlatformMapping.h
 #include "fboss/lib/bsp/meru800bfa/Meru800bfaBspPlatformMapping.h"
 #include "fboss/lib/bsp/meru800bia/Meru800biaBspPlatformMapping.h"
 #include "fboss/lib/bsp/minipack3bta/Minipack3BTABspPlatformMapping.h"
@@ -224,6 +225,7 @@ std::shared_ptr<M4062nhpSystemContainer>
 M4062nhpSystemContainer::getInstance() {
   return _m4062nhpSystemContainer.try_get();
 }
+
 using M5120cscSystemContainer =
     BspGenericSystemContainer<M5120cscBspPlatformMapping>;
 folly::Singleton<M5120cscSystemContainer> _m5120cscSystemContainer;
@@ -231,6 +233,15 @@ template <>
 std::shared_ptr<M5120cscSystemContainer>
 M5120cscSystemContainer::getInstance() {
   return _m5120cscSystemContainer.try_get();
+}
+
+using M6060ACTLSystemContainer =
+    BspGenericSystemContainer<M6060ACTLBspPlatformMapping>;
+folly::Singleton<M6060ACTLSystemContainer> _m6060actlSystemContainer;
+template <>
+std::shared_ptr<M6060ACTLSystemContainer>
+M6060ACTLSystemContainer::getInstance() {
+  return _m6060actlSystemContainer.try_get();
 }
 
 } // namespace fboss
