@@ -95,6 +95,7 @@ void fillHwSwitchDropBitmapStats(
   }
 #else
   CHECK_EQ(counterId2Value.size(), 0);
+#endif
 }
 
 void logDropBitmapReasons(const HwSwitchDropBitmapStats& /*stats*/) {}
